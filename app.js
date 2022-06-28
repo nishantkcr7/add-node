@@ -26,6 +26,13 @@ app.get('', (req, res)=>{
     console.log(req.query);
 })
 
+app.get('/contact', (req, res)=>{
+    res.render('contact', {
+        title: 'Contact Us',
+        admin: 'Nishantkcr7'
+    });
+})
+
 app.get('*', (req, res)=>{
     res.render('404',{
         error:'404! Page Not Found'
